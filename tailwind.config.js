@@ -41,9 +41,31 @@ module.exports = {
                         'border-radius' : '60% 40% 30% 70% / 60% 30% 70% 40%',
                     },
                 },
+                wave: {
+                    '0%' : { 
+                        'background-position' : '0px',  
+                    },
+                    '100%' : { 
+                        'background-position' : '1360px',  
+                    },
+                  
+                },
+                wavy: {
+                    '0%' : { 
+                        'transform' : 'translateX(0px)',  
+                    },
+                    '100%' : {
+                        'transform' : 'translateX(1360px)',  
+                    },
+                },
             },
             animation: {
-                animate: 'animate 3s ease-in-out infinite',
+                animate: 'animate 3s ease-in-out infinite',                
+                wave: 'wave 10s linear infinite',
+                wavy: 'wavy 10s linear infinite',
+            },
+            backgroundImage: {
+                'wavewave': "url('/src/img/wave.png')",
             },
         },
     },

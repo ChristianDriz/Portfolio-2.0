@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react'
-import SendMail from '../Components/sendmail'
+import SendMail from '../js/sendmail'
+import links  from '../js/links'
 
 const Contact = () => {
 
@@ -13,7 +14,7 @@ const Contact = () => {
 
     return (  
         <div className="min-h-[100dvh] bg-white dark:bg-midnight text-black dark:text-white flex items-center justify-center">
-            <div className="container mx-auto max-lg:py-20 ">
+            <div className="container mx-auto py-20 ">
                 <h1 className="text-blue text-2xl font-bold text-center mb-5 lg:mb-10">
                     Contact me
                 </h1>
@@ -37,9 +38,11 @@ const Contact = () => {
                         <div className='py-8 max-lg:text-center'>
                             <p className='font-semibold text-light-red dark:text-white'>Visit my social profile and get connected.</p>
                             <div className="icons flex max-lg:justify-center gap-5 text-blue text-3xl py-2 ">
-                                <Icon icon="tabler:brand-facebook" />
-                                <Icon icon="tabler:brand-instagram" />
-                                <Icon icon="tabler:brand-github" />
+                                {links.map((list) => (
+                                    <a key={list.icon} href={list.social} target='_blank' rel="noreferrer" className='hvr-bob'> 
+                                        <Icon icon={`tabler:brand-${list.icon}`} />
+                                    </a>
+                                ))}
                             </div>
                         </div>
                     </div>

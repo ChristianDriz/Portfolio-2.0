@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react'
-import Data from '../Components/projects'
+import Data from '../js/projects'
 import { useState } from 'react'
 
 const Projects = () => {
@@ -26,7 +26,7 @@ const Projects = () => {
     const filteredData = activeCategory === 'all' ? Data : Data.filter(project => project.type === activeCategory);
 
     return (  
-        <div className="min-h-[100dvh] bg-darkwhite dark:bg-black text-black dark:text-white text-center relative py-24">
+        <div className="min-h-[100dvh] bg-darkwhite dark:bg-inherit text-black dark:text-white text-center relative py-24">
             <div className='absolute bottom-0 left-0 w-full overflow-hidden '>
                 <svg 
                     className='relative block h-[150px] max-md:h-[70px] max-lg:h-[100px] w-full'
@@ -49,14 +49,14 @@ const Projects = () => {
                 <div className="flex items-center justify-center pt-8 md:pb-6">
                     <div className="flex items-center justify-center text-black dark:text-white bg-white dark:bg-midnight p-3 rounded-2xl text-sm sm:text-base">
                         {navigation.map((item) => (
-                        <a 
+                        <div 
                             key={item.name}
-                            className={`rounded-lg px-5 cursor-pointer leading-10 line-clamp-1 
+                            className={`rounded-lg px-3.5 sm:px-5  cursor-pointer leading-10 line-clamp-1
                             ${activeCategory === item.filter ? 'bg-light-red text-white' : ''}`}
                             onClick={() => filterData(item.filter)}
                         >
                             {item.name}
-                        </a>
+                        </div>
                         ))}
                     </div>
                 </div>
@@ -68,7 +68,7 @@ const Projects = () => {
                             <p className='text-sm text-subtxt-light dark:text-subtxt-dark h-10 line-clamp-2 mt-1'>{projects.desc} </p>
                         </div>
                         <div className='w-full bg-darkwhite dark:bg-black rounded-xl mt-2.5 mb-4 overflow-hidden'>
-                            <img src={projects.img} alt="" className='rounded-xl w-full  object-cover bg-white transition ease-in-out duration-500 hover:scale-105'/>
+                            <img src={projects.img} alt='projimg' loading='lazy' className='rounded-xl w-full  object-cover bg-white transition ease-in-out duration-500 hover:scale-105'/>
                         </div>
                         <div className='icons flex justify-center gap-5 text-blue text-2xl sm:text-3xl'>
                         {(projects.tech).map((tech) => (

@@ -39,7 +39,7 @@ function SendMail ()  {
 			Body : content
 		}).then(
 		  	message => {
-				if (message == "OK") {
+				if (message === "OK") {
 					Swal.fire({
 						title: 'Success!',
 						text: "Message has been sent.",

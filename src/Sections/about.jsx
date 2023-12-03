@@ -14,11 +14,11 @@ const About = () => {
     ]
 
     return (  
-        <div className="min-h-[100dvh] flex items-center bg-darkwhite dark:bg-black text-black dark:text-white">
+        <div className="min-h-[100dvh] flex items-center bg-darkwhite dark:bg-inherit text-black dark:text-white relative">
             <div className='container mx-auto max-lg:py-20'>
                 <div className="grid grid-cols-2 max-md:block ">
-                    <div className='flex justify-center'>
-                        <img src={WorkSpace} alt="workspace" className='h-96 max-lg:h-[325px] max-md:h-[250px]'/>
+                    <div className='flex justify-center '>
+                        <img src={WorkSpace} alt="workspace" className='h-96 max-lg:h-[325px] max-md:h-[250px] '/>
                     </div>
                     
                     <div className="max-md:text-center py-6 px-4 md:px-6 ">
@@ -34,17 +34,17 @@ const About = () => {
                             Let's connect and make something cool together!
                         </p>
                         <div className='icons flex max-md:justify-center gap-5 text-blue text-3xl '>
-                            <Icon icon='tabler:brand-html5'/>
-                            <Icon icon='tabler:brand-css3'/>
-                            <Icon icon='tabler:brand-javascript'/>
-                            <Icon icon='tabler:brand-php'/>
-                            <Icon icon='tabler:brand-bootstrap'/>
-                            <Icon icon='tabler:brand-react'/>
-                            <Icon icon='tabler:brand-tailwind'/>
+                            <Icon icon='tabler:brand-html5' className='hvr-float'/>
+                            <Icon icon='tabler:brand-css3' className='hvr-float'/>
+                            <Icon icon='tabler:brand-javascript' className='hvr-float'/>
+                            <Icon icon='tabler:brand-php' className='hvr-float'/>
+                            <Icon icon='tabler:brand-bootstrap' className='hvr-float'/>
+                            <Icon icon='tabler:brand-react' className='hvr-float'/>
+                            <Icon icon='tabler:brand-tailwind' className='hvr-float'/>
                         </div>
-                        <div className='my-10 max-md:my-8'>
+                        <div className='my-10 max-md:my-8 '>
                             <a 
-                                className="bg-light-red rounded-xl px-8 py-3 text-white font-semibold text-sm lg:text-base cursor-pointer"
+                                className="bg-light-red rounded-xl px-8 py-3 text-white font-semibold text-sm lg:text-base cursor-pointer hvr-wobble-vertical"
                                 href={CV}
                             >Download CV
                             </a> 
