@@ -25,7 +25,7 @@ function App() {
     return (
 
         loading ?  
-        <div className="flex items-center justify-center h-screen w-full bg-white dark:bg-midnight">
+        <div className="flex items-center justify-center h-screen w-screen bg-white dark:bg-midnight pr-[30px]">
             <PropagateLoader
                 color={'#60A5FA'}
                 loading={loading}
