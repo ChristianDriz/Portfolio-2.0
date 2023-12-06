@@ -1,39 +1,28 @@
 import { useState, useEffect } from 'react';
 
 function DarkMode() {
+
+    let mode = localStorage.getItem('dark') === 'true';
+
+    if (mode) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
     
     const [enabled, setEnabled] = useState(false);
+    const changeTheme = () => {
+        setEnabled(!enabled);
 
-    useEffect(() => {
-        
-        // Load theme preference from local storage on component mount
-        const theme = localStorage.getItem('dark') === 'true';
+        mode = !mode;
 
-        // Set the initial theme based on the preference
-        if (theme) {
+        if (mode){
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark');
         }
-
-        // Set the initial state based on the preference
-        setEnabled(theme);
-        }, []); 
-
-        const changeTheme = () => {
-
-            const newTheme = !enabled;
-
-            setEnabled(newTheme);
-
-            if (newTheme) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-
-            localStorage.setItem('dark', newTheme);
-        };
+        localStorage.setItem('dark', mode);
+    };
 
     return { changeTheme, enabled };
 }

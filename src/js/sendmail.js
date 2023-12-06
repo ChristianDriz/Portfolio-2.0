@@ -14,9 +14,8 @@ function SendMail ()  {
 
     const handeInput = (e) => {
         const {name, value} = e.target;
-        let trimmedVal = value.trim();
-
-        setFormData({...formData, [name]:trimmedVal });
+		
+        setFormData({...formData, [name]:value });
 
     }
 

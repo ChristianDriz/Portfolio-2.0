@@ -3,10 +3,10 @@ import { Icon } from '@iconify/react'
 import UI from '../img/ui design.png'
 import Web from '../img/web dev.png'
 import Graphics from '../img/graphics design.png'
-import CV from '../img/Christian Joseph Dimla - CV.pdf'
+import CV from '../img/CV_DimlaChristianJoseph.pdf'
 
 const About = () => {
-
+ 
     const skills = [
         {image: UI, title: 'User Interface Design', desc: 'Elevate User Experiences'},
         {image: Web, title: 'Web development', desc: 'Turning Ideas into Online Realities'},
