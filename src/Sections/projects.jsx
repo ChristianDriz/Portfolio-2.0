@@ -70,10 +70,21 @@ const Projects = () => {
                         <div className='w-full bg-darkwhite dark:bg-black rounded-xl mt-2.5 mb-4 overflow-hidden'>
                             <img src={projects.img} alt='projimg' loading='lazy' className='rounded-xl w-full  object-cover bg-white transition ease-in-out duration-500 hover:scale-105'/>
                         </div>
-                        <div className='icons flex justify-center gap-5 text-blue text-2xl sm:text-3xl'>
-                        {(projects.tech).map((tech) => (
-                            <Icon key={tech} icon={`${projects.type === 'graphics' ? `${tech}` : `tabler:brand-${tech}`}`}/>
-                        ))}
+                        <div className={`sm:flex sm:items-center ${projects.github || projects.preview ? 'sm:justify-between ' : 'sm:justify-center'}`}>
+                            <div className='icons flex flex-wrap justify-center items-center gap-1.5 text-blue text-2xl sm:text-3xl '>
+                            {(projects.tech).map((tech) => (
+                                <p className='text-xs py-1 px-3 rounded-xl font-medium bg-darkwhite dark:bg-black'>{tech}</p>
+                                // <Icon key={tech} icon={`${projects.type === 'graphics' ? `${tech}` : `tabler:brand-${tech}`}`}/>
+                            ))}
+                            </div>       
+                            <div className={`flex gap-2 justify-center max-sm:pt-3 text-blue text-2xl ${projects.github || projects.preview ? '' : 'hidden'}`}>
+                                <a className={`${projects.github ? 'hvr-bob' : 'hidden'}`} href={projects.github} target='_blank' rel="noreferrer">
+                                    <Icon icon='tabler:brand-github'></Icon>
+                                </a>
+                                <a className={`${projects.preview ? 'hvr-bob' : 'hidden'} `} href={projects.preview} target='_blank' rel="noreferrer">
+                                    <Icon icon='tabler:link'></Icon>
+                                </a>  
+                            </div>
                         </div>
                     </div>
                     ))}

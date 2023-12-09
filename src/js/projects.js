@@ -7,6 +7,7 @@ import WeatherApp from '../img/projects/weather app.png'
 import PortfolioUI from '../img/projects/portfolio ui.png'
 import Portfolio from '../img/projects/portfolio.png'
 import Messaging from '../img/projects/messaging.png'
+import ToDo from '../img/projects/To do app.png'
 
 const Data = [
     { 
@@ -15,7 +16,9 @@ const Data = [
         title: 'Personal Portfolio', 
         desc: 'My personal portfolio with responsive and dark mode feature using react and tailwind. ', 
         img: Portfolio, 
-        tech: ['react', 'tailwind'] 
+        tech: ['React', 'Tailwind'],
+        github: 'https://github.com/ChristianDriz/Portfolio-2.0',
+        preview: 'https://drix-portfolio.vercel.app/'
     },
     { 
         id: 2, 
@@ -23,7 +26,8 @@ const Data = [
         title: 'Fuel-On', 
         desc: 'An On-line Information Management System with 2D Mapping that is capable of monitoring and improving the efficiency of fuel distribution at gasoline stations. ', 
         img: FuelOn, 
-        tech: ['html5', 'css3', 'javascript','bootstrap', 'php'] 
+        tech: ['HTML', 'CSS', 'JavaScript','Bootstrap', 'PHP'],
+        github: 'https://github.com/ChristianDriz/fuel-on',
     },
     { 
         id: 3, 
@@ -31,7 +35,7 @@ const Data = [
         title: 'Suit Up', 
         desc: 'A simple ecommerce front end web design using bootstrap and jquery.', 
         img: Ecommerce, 
-        tech: ['html5', 'css3', 'javascript','bootstrap'] 
+        tech: ['HTML', 'CSS', 'JavaScript','Bootstrap']
     },
     { 
         id: 4, 
@@ -39,7 +43,10 @@ const Data = [
         title: 'Messaging', 
         desc: 'A simple front end messaging web app with login and sign up page using react', 
         img: Messaging, 
-        tech: ['react', 'tailwind'] 
+        tech: ['React', 'Tailwind'],
+        github: 'https://github.com/ChristianDriz/Messaging-React-App',
+        preview: 'https://christiandriz.github.io/Messaging-React-App/'
+
     },
     { 
         id: 5, 
@@ -47,7 +54,9 @@ const Data = [
         title: 'Weather App', 
         desc: 'A simple weather application with dark mode feature', 
         img: WeatherApp, 
-        tech: ['html5', 'css3', 'javascript', 'tailwind'] 
+        tech: ['HTML', 'CSS', 'JavaScript', 'Tailwind'],
+        github: 'https://github.com/ChristianDriz/weather-app',
+        preview: 'https://christiandriz.github.io/weather-app/'
     },
     { 
         id: 6, 
@@ -55,7 +64,7 @@ const Data = [
         title: 'Admin Dashboard', 
         desc: 'Admin Dashboard user interface using figma', 
         img: Dashboard, 
-        tech: ['figma'] 
+        tech: ['Figma'] 
     },
     { 
         id: 7,
@@ -63,7 +72,7 @@ const Data = [
         title: 'Food Ordering', 
         desc: 'A simple food ordering user interface using figma', 
         img: Ordering, 
-        tech: ['figma'] 
+        tech: ['Figma'] 
     },
     { 
         id: 8, 
@@ -71,7 +80,7 @@ const Data = [
         title: 'Portfolio UI Design', 
         desc: 'Portfolio user interface using figma with darkmode feature.', 
         img: PortfolioUI, 
-        tech: ['figma'] 
+        tech: ['Figma'] 
     },
     { 
         id: 9, 
@@ -79,8 +88,121 @@ const Data = [
         title: 'Poster', 
         desc: 'Fuel On capstone poster using canva and adobe photoshop', 
         img: Poster, 
-        tech: ['simple-icons:canva', 'basil:adobe-photoshop-outline'] 
+        tech: ['Canva', 'Photoshop'] 
+    },
+    { 
+        id: 10, 
+        type: 'web', 
+        title: 'To Do App', 
+        desc: 'A simple to do app using react js and tailwind', 
+        img: ToDo, 
+        tech: ['React', 'Tailwind'],
+        github: 'https://github.com/ChristianDriz/To-do-app',
+        preview: 'https://drix-to-do-app.vercel.app/'
     },
 ]
+
+// const Data = [
+//     { 
+//         id: 1, 
+//         type: 'web', 
+//         title: 'Personal Portfolio', 
+//         desc: 'My personal portfolio with responsive and dark mode feature using react and tailwind. ', 
+//         img: Portfolio, 
+//         tech: ['react', 'tailwind'],
+//         github: 'https://github.com/ChristianDriz/Portfolio-2.0',
+//         preview: 'https://drix-portfolio.vercel.app/'
+//     },
+//     { 
+//         id: 2, 
+//         type: 'web', 
+//         title: 'Fuel-On', 
+//         desc: 'An On-line Information Management System with 2D Mapping that is capable of monitoring and improving the efficiency of fuel distribution at gasoline stations. ', 
+//         img: FuelOn, 
+//         tech: ['html5', 'css3', 'javascript','bootstrap', 'php'],
+//         github: 'https://github.com/ChristianDriz/fuel-on',
+//     },
+//     { 
+//         id: 3, 
+//         type: 'web', 
+//         title: 'Suit Up', 
+//         desc: 'A simple ecommerce front end web design using bootstrap and jquery.', 
+//         img: Ecommerce, 
+//         tech: ['html5', 'css3', 'javascript','bootstrap']
+//     },
+//     { 
+//         id: 4, 
+//         type: 'web', 
+//         title: 'Messaging', 
+//         desc: 'A simple front end messaging web app with login and sign up page using react', 
+//         img: Messaging, 
+//         tech: ['react', 'tailwind'],
+//         github: 'https://github.com/ChristianDriz/Messaging-React-App',
+//         preview: 'https://christiandriz.github.io/Messaging-React-App/'
+
+//     },
+//     { 
+//         id: 5, 
+//         type: 'web', 
+//         title: 'Weather App', 
+//         desc: 'A simple weather application with dark mode feature', 
+//         img: WeatherApp, 
+//         tech: ['html5', 'css3', 'javascript', 'tailwind'],
+//         github: 'https://github.com/ChristianDriz/weather-app',
+//         preview: 'https://christiandriz.github.io/weather-app/'
+//     },
+//     { 
+//         id: 6, 
+//         type: 'ui', 
+//         title: 'Admin Dashboard', 
+//         desc: 'Admin Dashboard user interface using figma', 
+//         img: Dashboard, 
+//         tech: ['figma'] 
+//     },
+//     { 
+//         id: 7,
+//         type: 'ui', 
+//         title: 'Food Ordering', 
+//         desc: 'A simple food ordering user interface using figma', 
+//         img: Ordering, 
+//         tech: ['figma'] 
+//     },
+//     { 
+//         id: 8, 
+//         type: 'ui', 
+//         title: 'Portfolio UI Design', 
+//         desc: 'Portfolio user interface using figma with darkmode feature.', 
+//         img: PortfolioUI, 
+//         tech: ['figma'] 
+//     },
+//     { 
+//         id: 9, 
+//         type: 'graphics', 
+//         title: 'Poster', 
+//         desc: 'Fuel On capstone poster using canva and adobe photoshop', 
+//         img: Poster, 
+//         tech: ['simple-icons:canva', 'basil:adobe-photoshop-outline'] 
+//     },
+//     { 
+//         id: 10, 
+//         type: 'web', 
+//         title: 'To Do App', 
+//         desc: 'A simple to do app using react js and tailwind', 
+//         img: Poster, 
+//         tech: ['react', 'tailwind'],
+//         github: 'https://github.com/ChristianDriz/To-do-app',
+//         preview: 'https://drix-to-do-app.vercel.app/'
+//     },
+//     { 
+//         id: 11, 
+//         type: 'web', 
+//         title: 'Solar System', 
+//         desc: 'Animated solar system using html and css', 
+//         img: Poster, 
+//         tech: ['react', 'tailwind'],
+//         github: 'https://github.com/ChristianDriz/Solar-System',
+//         preview: 'https://christiandriz.github.io/Solar-System/'
+//     },
+// ]
 
 export default Data;
