@@ -46,7 +46,7 @@ const Navbar = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className=' animate__animated animate__rotateIn animate__delay-4s'>
+                        <div className=' animate__animated animate__rotateIn animate__delay-4s max-md:ml-[-22px]'>
                             <Icon 
                                 icon={`${enabled ? 'tabler:sun-high' : 'tabler:moon'}`} 
                                 className='text-black dark:text-white text-2xl transition hover:rotate-45' 
