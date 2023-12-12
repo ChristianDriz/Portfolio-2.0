@@ -32,37 +32,18 @@ module.exports = {
             keyframes: {
                 animate: {
                     '0%' : { 
-                        'border-radius' : '60% 40% 30% 70% / 60% 30% 70% 40%',  
+                        'border-radius' : '60% 40% 30% 70% / 60% 30% 70% 40%'
                     },
                     '50%' : {
-                        'border-radius' : '40% 60% 70% 40% / 50% 60% 30% 60%',
+                        'border-radius' : '40% 60% 70% 40% / 50% 60% 30% 60%'
                     },
                     '100%' : {
-                        'border-radius' : '60% 40% 30% 70% / 60% 30% 70% 40%',
-                    },
-                },
-                wave: {
-                    '0%' : { 
-                        'background-position' : '0px',  
-                    },
-                    '100%' : { 
-                        'background-position' : '1360px',  
-                    },
-                  
-                },
-                wavy: {
-                    '0%' : { 
-                        'transform' : 'translateX(0px)',  
-                    },
-                    '100%' : {
-                        'transform' : 'translateX(1360px)',  
+                        'border-radius' : '60% 40% 30% 70% / 60% 30% 70% 40%'
                     },
                 },
             },
             animation: {
-                animate: 'animate 3s ease-in-out infinite',                
-                wave: 'wave 10s linear infinite',
-                wavy: 'wavy 10s linear infinite',
+                animate: 'animate 4s ease-in-out infinite',                
             },
             backgroundImage: {
                 'wavewave': "url('/src/img/wave.png')",

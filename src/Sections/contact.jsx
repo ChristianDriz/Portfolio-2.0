@@ -10,7 +10,7 @@ const Contact = () => {
         {icon: 'map-pin', title: 'home address', details: 'Balanga City, Bataan, Philippines'}
     ]
 
-    const { formSubmit, formData, handeInput } = SendMail();
+    const { formSubmit, formData, handeInput, nameError, emailError, subjectError, messageError } = SendMail();
 
     return (  
         <div className="min-h-[100dvh] bg-white dark:bg-midnight text-black dark:text-white flex items-center justify-center">
@@ -48,103 +48,90 @@ const Contact = () => {
                     </div>
                     <div className=' py-1 px-4 md:px-6 max-lg:order-first '>
                         <form onSubmit={formSubmit}>
-                            <div className='grid grid-cols-2 max-sm:grid-cols-1'>
-                                <div className='relative py-3'>
-                                    <input 
-                                        type="text" 
-                                        name="fname" 
-                                        id="fname" 
-                                        className='rounded-2xl px-5 py-3.5 border border-outline dark:border-subtxt-dark bg-inherit w-full outline-none peer '
-                                        autoComplete='off'
-                                        placeholder=' '
-                                        value={formData.fname}
-                                        onChange={handeInput}
-                                        required
-                                    />
-                                    <label 
-                                        htmlFor="fname" 
-                                        className='absolute text-label dark:text-subtxt-dark left-4 duration-200 bg-white
-                                        top-0 text-sm peer-focus:text-sm peer-focus:top-0 peer-placeholder-shown:top-[27px] 
-                                        peer-placeholder-shown:text-base px-1.5 bg-white dark:bg-midnight'
-                                    >First name</label>
-                                </div>
-                                <div className='relative py-3 sm:ml-4'>
-                                    <input 
-                                        type="text" 
-                                        name="lname" 
-                                        id="lname" 
-                                        className='rounded-2xl px-5 py-3.5 border border-outline dark:border-subtxt-dark bg-inherit w-full outline-none peer '
-                                        autoComplete='off'
-                                        placeholder=' '
-                                        value={formData.lname}
-                                        onChange={handeInput}
-                                        required
-                                    />
-                                    <label 
-                                        htmlFor="lname" 
-                                        className='absolute text-label dark:text-subtxt-dark left-4 duration-200 bg-white
-                                        top-0 text-sm peer-focus:text-sm peer-focus:top-0 peer-placeholder-shown:top-[27px] 
-                                        peer-placeholder-shown:text-base px-1.5 bg-white dark:bg-midnight'
-                                    >Last name</label>
-                                </div>
+                            <div className='relative pt-3 pb-6'>
+                                <input 
+                                    type="text" 
+                                    name="name" 
+                                    id="name" 
+                                    className={`rounded-2xl px-5 py-3.5 border bg-inherit w-full outline-none peer 
+                                    ${nameError ? 'border-red-500' : 'border-outline dark:border-subtxt-dark' }`}
+                                    autoComplete='off'
+                                    placeholder=' '
+                                    value={formData.name}
+                                    onChange={handeInput}
+                                />
+                                <label 
+                                    htmlFor="name" 
+                                    className={`absolute text-label dark:text-subtxt-dark left-4 duration-200 bg-white
+                                    top-0 text-sm peer-focus:text-sm peer-focus:top-0 peer-placeholder-shown:top-[27px] 
+                                    peer-placeholder-shown:text-base px-1.5 bg-white dark:bg-midnight
+                                    ${nameError ? 'peer-focus:text-red-500' : '' }`}
+                                >Name</label>
+                                <small className='absolute left-0 bottom-0 text-red-500 '>{nameError}</small>
                             </div>
-                            <div className='relative py-3 '>
+                            <div className='relative pt-3 pb-6 '>
                                 <input 
                                     type="email" 
                                     name="email" 
                                     id="email" 
-                                    className='rounded-2xl px-5 py-3.5 border border-outline dark:border-subtxt-dark bg-inherit w-full outline-none peer '
+                                    className={`rounded-2xl px-5 py-3.5 border bg-inherit w-full outline-none peer 
+                                    ${emailError ? 'border-red-500' : 'border-outline dark:border-subtxt-dark' }`}
                                     autoComplete='off'
                                     placeholder=' '
                                     value={formData.email}
                                     onChange={handeInput}
-                                    required
                                 />
                                 <label 
                                     htmlFor="email" 
-                                    className='absolute text-label dark:text-subtxt-dark left-4 duration-200 bg-white
+                                    className={`absolute text-label dark:text-subtxt-dark left-4 duration-200 bg-white 
                                     top-0 text-sm peer-focus:text-sm peer-focus:top-0 peer-placeholder-shown:top-[27px] 
-                                    peer-placeholder-shown:text-base px-1.5 bg-white dark:bg-midnight'
+                                    peer-placeholder-shown:text-base px-1.5 bg-white dark:bg-midnight
+                                    ${emailError ? 'peer-focus:text-red-500' : '' }`}
                                 >Email address</label>
+                                <small className='absolute left-0 bottom-0 text-red-500'>{emailError}</small>
                             </div>
-                            <div className='relative py-3'>
+                            <div className='relative pt-3 pb-6'>
                                 <input 
                                     type="text" 
                                     name="subject" 
                                     id="subject" 
-                                    className='rounded-2xl px-5 py-3.5 border border-outline dark:border-subtxt-dark bg-inherit w-full outline-none peer '
+                                    className={`rounded-2xl px-5 py-3.5 border bg-inherit w-full outline-none peer 
+                                    ${subjectError ? 'border-red-500' : 'border-outline dark:border-subtxt-dark' }`}
                                     autoComplete='off'
                                     placeholder=' '
                                     value={formData.subject}
                                     onChange={handeInput}
-                                    required
                                 />
                                 <label
                                     htmlFor="subject" 
-                                    className='absolute text-label dark:text-subtxt-dark left-4 duration-200 bg-white
+                                    className={`absolute text-label dark:text-subtxt-dark left-4 duration-200 bg-white
                                     top-0 text-sm peer-focus:text-sm peer-focus:top-0 peer-placeholder-shown:top-[27px] 
-                                    peer-placeholder-shown:text-base px-1.5 bg-white dark:bg-midnight'
+                                    peer-placeholder-shown:text-base px-1.5 bg-white dark:bg-midnight
+                                    ${subjectError ? 'peer-focus:text-red-500' : '' }`}
                                 >Subject</label>
+                                <small className='absolute left-0 bottom-0 text-red-500'>{subjectError}</small>
                             </div>
-                            <div className='relative py-3'>
+                            <div className='relative pt-3 pb-4 '>
                                 <textarea 
                                     name="message" 
                                     id="message" 
-                                    className='rounded-2xl px-5 py-3.5 border border-outline dark:border-subtxt-dark bg-inherit w-full h-32 resize-none outline-none peer'
+                                    className={`rounded-2xl px-5 py-3.5 border bg-inherit w-full h-32 resize-none outline-none peer
+                                    ${messageError ? 'border-red-500' : 'border-outline dark:border-subtxt-dark' }`}
                                     autoComplete='off'
                                     placeholder=' '
                                     value={formData.message}
                                     onChange={handeInput}
-                                    required
                                 ></textarea>
                                 <label 
                                     htmlFor="message" 
-                                    className='absolute text-label dark:text-subtxt-dark left-4 duration-200 bg-white
+                                    className={`absolute text-label dark:text-subtxt-dark left-4 duration-200 bg-white
                                     top-0 text-sm peer-focus:text-sm peer-focus:top-0 peer-placeholder-shown:top-[27px] 
-                                    peer-placeholder-shown:text-base px-1.5 bg-white dark:bg-midnight'
+                                    peer-placeholder-shown:text-base px-1.5 bg-white dark:bg-midnight
+                                    ${messageError ? 'peer-focus:text-red-500' : '' }`}
                                 >Message</label>
+                                <small className='absolute left-0 bottom-0 text-red-500'>{messageError}</small>
                             </div>
-                            <div className='my-3 max-lg:text-center max-lg:mb-10'>
+                            <div className='my-5 max-lg:text-center max-lg:mb-10'>
                                 <button className="bg-light-red rounded-xl px-8 py-3 text-white font-semibold text-sm lg:text-base cursor-pointer">Submit</button>
                             </div>
                         </form>

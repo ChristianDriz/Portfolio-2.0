@@ -73,7 +73,7 @@ const Projects = () => {
                         <div className={`sm:flex sm:items-center ${projects.github || projects.preview ? 'sm:justify-between ' : 'sm:justify-center'}`}>
                             <div className='icons flex flex-wrap justify-center items-center gap-1.5 text-blue text-2xl sm:text-3xl '>
                             {(projects.tech).map((tech) => (
-                                <p className='text-xs py-1 px-3 rounded-xl font-medium bg-darkwhite dark:bg-black'>{tech}</p>
+                                <p key={tech} className='text-xs py-1 px-3 rounded-xl font-medium bg-darkwhite dark:bg-black'>{tech}</p>
                                 // <Icon key={tech} icon={`${projects.type === 'graphics' ? `${tech}` : `tabler:brand-${tech}`}`}/>
                             ))}
                             </div>       

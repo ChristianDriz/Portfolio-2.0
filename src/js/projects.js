@@ -101,6 +101,7 @@ const Data = [
         preview: 'https://drix-to-do-app.vercel.app/'
     },
 ]
+export default Data;
 
 // const Data = [
 //     { 
@@ -205,4 +206,4 @@ const Data = [
 //     },
 // ]
 
-export default Data;
+// export default Data;

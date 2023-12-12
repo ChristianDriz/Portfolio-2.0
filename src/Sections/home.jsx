@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <div className='h-[100dvh] w-full bg-darkwhite dark:bg-inherit relative text-black dark:text-white '>
-            <div className='absolute bottom-0 left-0 overflow-hidden w-full '>
+            <div className='absolute bottom-0 left-0 overflow-hidden w-full'>
                 <svg 
                     className='relative block h-[150px] max-md:h-[70px] max-lg:h-[100px] w-full '
                     data-name="Layer 1" 
