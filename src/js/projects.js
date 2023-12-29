@@ -8,6 +8,8 @@ import PortfolioUI from '../img/projects/portfolio ui.png'
 import Portfolio from '../img/projects/portfolio.png'
 import Messaging from '../img/projects/messaging.png'
 import ToDo from '../img/projects/To do app.png'
+import AgeCal from '../img/projects/age-calculator.png'
+import NewsLetter from '../img/projects/newsletter.png'
 
 const Data = [
     { 
@@ -99,6 +101,26 @@ const Data = [
         tech: ['React', 'Tailwind'],
         github: 'https://github.com/ChristianDriz/To-do-app',
         preview: 'https://drix-to-do-app.vercel.app/'
+    },
+    { 
+        id: 11, 
+        type: 'web', 
+        title: 'News Letter', 
+        desc: 'A Frontend Mentor challenge: create a Newsletter Sign-up form with a success message using React and Tailwind.', 
+        img: NewsLetter, 
+        tech: ['React', 'Tailwind'],
+        github: 'https://github.com/ChristianDriz/Newsletter-sign-up-form-with-success-message',
+        preview: 'https://drix-newsletter-sign-up-form-with-success-message.vercel.app/'
+    },
+    { 
+        id: 12, 
+        type: 'web', 
+        title: 'Age Calculator', 
+        desc: 'A Frontend Mentor challenge: create an Age calculator app using React and Tailwind.', 
+        img: AgeCal, 
+        tech: ['React', 'Tailwind'],
+        github: 'https://github.com/ChristianDriz/Age-calculator-app',
+        preview: 'https://drix-age-calculator-app.vercel.app/'
     },
 ]
 export default Data;

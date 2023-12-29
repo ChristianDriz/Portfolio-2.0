@@ -11,6 +11,16 @@ function DarkMode() {
     const [icon, setIcon] = useState(false);
 
     useEffect(() => {
+        
+        // Function to update the 'dark' class based on localStorage and system matchMedia
+        function windowMatch () {
+            if (localStorage.theme === 'dark' || darkTheme.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+
         switch (theme) {
             // If the theme is 'dark', set the icon to true (moon) and add 'dark' class to the document
             case 'dark':
@@ -33,30 +43,22 @@ function DarkMode() {
                 windowMatch();
                 break;
         }
-    }, [theme]);
 
-    // Function to update the 'dark' class based on localStorage and system matchMedia
-    function windowMatch () {
-        if (localStorage.theme === 'dark' || darkTheme.matches) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    }
-
-    // Event listener for changes in the system's matchMedia (e.g., when dark mode is toggled)
-    darkTheme.addEventListener('change', (e) => {
-        if (!('theme' in localStorage)) {
-            // If there is no manual theme set in localStorage, update the icon and 'dark' class based on matchMedia
-            if (e.matches) {
-                setIcon(true);
-                document.documentElement.classList.add('dark');
-            } else {
-                setIcon(false);
-                document.documentElement.classList.remove('dark');
+        // Event listener for changes in the system's matchMedia (e.g., when dark mode is toggled)
+        darkTheme.addEventListener('change', (e) => {
+            if (!('theme' in localStorage)) {
+                // If there is no manual theme set in localStorage, update the icon and 'dark' class based on matchMedia
+                if (e.matches) {
+                    setIcon(true);
+                    document.documentElement.classList.add('dark');
+                } else {
+                    setIcon(false);
+                    document.documentElement.classList.remove('dark');
+                }
             }
-        }
-    });
+        });
+        
+    }, [theme, darkTheme, darkTheme.matches]);
 
     return { theme, setTheme, icon };
 }

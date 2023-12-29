@@ -29,7 +29,7 @@ function Validate () {
             setEmailError('Please input your email');
             return false;
         }
-        if (!email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z])+\.([A-Za-z]{2,4})$/)) {
+        if (!email.match(/^([A-Za-z0-9_.-])+@([A-Za-z])+\.([A-Za-z]{2,4})$/)) {
             setEmailError('Invalid email address format (ex: johndoe@gmail.com)');
             return false;
         } 

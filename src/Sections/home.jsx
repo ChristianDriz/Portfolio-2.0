@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react'
-import me from '../img/me.png'
+import me from '../img/me.png';
 import { Link } from 'react-scroll'
 import links  from '../js/links'
 
