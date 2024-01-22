@@ -141,7 +141,7 @@ const Data = [
         desc: 'A Frontend Mentor challenge: create a responsive news homepage', 
         img: NewsHomepage, 
         tech: ['HTML', 'JS', 'Tailwind'],
-        github: 'https://github.com/ChristianDriz/Solar-System',
+        github: 'https://github.com/ChristianDriz/News-homepage',
         preview: 'https://christiandriz.github.io/News-homepage/'
     },
 ]
