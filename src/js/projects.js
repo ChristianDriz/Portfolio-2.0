@@ -10,6 +10,8 @@ import Messaging from '../img/projects/messaging.png'
 import ToDo from '../img/projects/To do app.png'
 import AgeCal from '../img/projects/age-calculator.png'
 import NewsLetter from '../img/projects/newsletter.png'
+import Planets from '../img/projects/planets.png'
+import NewsHomepage from '../img/projects/news-homepage.png'
 
 const Data = [
     { 
@@ -121,6 +123,26 @@ const Data = [
         tech: ['React', 'Tailwind'],
         github: 'https://github.com/ChristianDriz/Age-calculator-app',
         preview: 'https://drix-age-calculator-app.vercel.app/'
+    },
+    { 
+        id: 13, 
+        type: 'web', 
+        title: 'Solar System', 
+        desc: 'Solar System with animation using keyframes', 
+        img: Planets, 
+        tech: ['HTML', 'Vanilla CSS'],
+        github: 'https://github.com/ChristianDriz/Solar-System',
+        preview: 'https://christiandriz.github.io/Solar-System/'
+    },
+    { 
+        id: 14, 
+        type: 'web', 
+        title: 'News Homepage', 
+        desc: 'A Frontend Mentor challenge: create a responsive news homepage', 
+        img: NewsHomepage, 
+        tech: ['HTML', 'JS', 'Tailwind'],
+        github: 'https://github.com/ChristianDriz/Solar-System',
+        preview: 'https://christiandriz.github.io/News-homepage/'
     },
 ]
 export default Data;
