@@ -37,7 +37,6 @@ function App() {
         </div>
             :
         <>
-            <SpeedInsights/>
             <ParticleBackground/>
             <Navbar/>
             <Element name="home">
@@ -53,6 +52,7 @@ function App() {
                 <Contact />
             </Element>
             <Footer/>
+            <SpeedInsights/>
         </>
             
     );
