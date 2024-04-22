@@ -9,8 +9,7 @@ import ParticleBackground from "./js/ParticleBackground"
 import { useState, useEffect } from "react";
 import PropagateLoader from "react-spinners/PropagateLoader";
 import 'animate.css';
-import 'hover.css';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import 'hover.css'
 
 function App() {
 
@@ -37,7 +36,6 @@ function App() {
         </div>
             :
         <>
-            <SpeedInsights/>
             <ParticleBackground/>
             <Navbar/>
             <Element name="home">
