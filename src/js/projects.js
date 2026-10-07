@@ -5,24 +5,28 @@ import Ecommerce from '../img/projects/ecommerce.png'
 import FuelOn from '../img/projects/fuel on.png'
 import WeatherApp from '../img/projects/weather app.png'
 import PortfolioUI from '../img/projects/portfolio ui.png'
-import Portfolio from '../img/projects/portfolio.png'
+// import Portfolio from '../img/projects/portfolio.png'
 import Messaging from '../img/projects/messaging.png'
 import ToDo from '../img/projects/To do app.png'
 import AgeCal from '../img/projects/age-calculator.png'
 import NewsLetter from '../img/projects/newsletter.png'
 import Planets from '../img/projects/planets.png'
 import NewsHomepage from '../img/projects/news-homepage.png'
+import MovieDrix from '../img/projects/moviedrix.png'
+import Netflix from '../img/projects/Netflix.png'
+import Insta from '../img/projects/Insta.png'
+
 
 const Data = [
     { 
         id: 1, 
         type: 'web', 
-        title: 'Personal Portfolio', 
-        desc: 'My personal portfolio with responsive and dark mode feature using react and tailwind. ', 
-        img: Portfolio, 
-        tech: ['React', 'Tailwind'],
-        github: 'https://github.com/ChristianDriz/Portfolio-2.0',
-        preview: 'https://drix-portfolio.vercel.app/'
+        title: 'Movie Drix', 
+        desc: 'This is a movie or tv search website that allows the user to browse or search for latest movie and tv shows.', 
+        img: MovieDrix, 
+        tech: ['NextJS', 'Tailwind', 'TypeScript'],
+        github: 'hhttps://github.com/ChristianDriz/movie-drix',
+        preview: 'https://movie-drix.vercel.app/'
     },
     { 
         id: 2, 
@@ -33,8 +37,28 @@ const Data = [
         tech: ['HTML', 'CSS', 'JavaScript','Bootstrap', 'PHP'],
         github: 'https://github.com/ChristianDriz/fuel-on',
     },
-    { 
+        { 
         id: 3, 
+        type: 'web', 
+        title: 'Netflix Clone', 
+        desc: 'A Netflix-inspired streaming interface focused on recreating a modern and responsive browsing experience. Built with Next.js, TypeScript, and Tailwind CSS, featuring a clean layout for showcasing movies and content in an organized, user-friendly interface.', 
+        img: Netflix, 
+        tech: ['NextJS', 'Tailwind', 'TypeScript'],
+        github: 'https://github.com/ChristianDriz/netflix-clone',
+        preview: 'https://netflix-clone-lake-ten.vercel.app/'
+    },
+    { 
+        id: 4, 
+        type: 'web', 
+        title: 'Instagram Clone', 
+        desc: 'A social media interface inspired by Instagram, designed to recreate its familiar feed-based experience and visual layout. Built with Next.js, TypeScript, and Tailwind CSS, with an emphasis on responsive design and a clean, interactive user experience.', 
+        img: Insta, 
+        tech: ['NextJS', 'Tailwind', 'TypeScript'],
+        github: 'https://github.com/ChristianDriz/Instagram-clone',
+        preview: 'https://instagram-clone-eight-rho.vercel.app/'
+    },
+    { 
+        id: 5, 
         type: 'web', 
         title: 'Suit Up', 
         desc: 'A simple ecommerce front end web design using bootstrap and jquery.', 
@@ -42,7 +66,7 @@ const Data = [
         tech: ['HTML', 'CSS', 'JavaScript','Bootstrap']
     },
     { 
-        id: 4, 
+        id: 6, 
         type: 'web', 
         title: 'Messaging', 
         desc: 'A simple front end messaging web app with login and sign up page using react', 
@@ -53,7 +77,7 @@ const Data = [
 
     },
     { 
-        id: 5, 
+        id: 7, 
         type: 'web', 
         title: 'Weather App', 
         desc: 'A simple weather application with dark mode feature', 
@@ -63,7 +87,7 @@ const Data = [
         preview: 'https://christiandriz.github.io/weather-app/'
     },
     { 
-        id: 6, 
+        id: 8, 
         type: 'ui', 
         title: 'Admin Dashboard', 
         desc: 'Admin Dashboard user interface using figma', 
@@ -71,7 +95,7 @@ const Data = [
         tech: ['Figma'] 
     },
     { 
-        id: 7,
+        id: 9,
         type: 'ui', 
         title: 'Food Ordering', 
         desc: 'A simple food ordering user interface using figma', 
@@ -79,7 +103,7 @@ const Data = [
         tech: ['Figma'] 
     },
     { 
-        id: 8, 
+        id: 10, 
         type: 'ui', 
         title: 'Portfolio UI Design', 
         desc: 'Portfolio user interface using figma with darkmode feature.', 
@@ -87,7 +111,7 @@ const Data = [
         tech: ['Figma'] 
     },
     { 
-        id: 9, 
+        id: 11, 
         type: 'graphics', 
         title: 'Poster', 
         desc: 'Fuel On capstone poster using canva and adobe photoshop', 
@@ -95,7 +119,7 @@ const Data = [
         tech: ['Canva', 'Photoshop'] 
     },
     { 
-        id: 10, 
+        id: 12, 
         type: 'web', 
         title: 'To Do App', 
         desc: 'A simple to do app using react js and tailwind', 
@@ -105,7 +129,7 @@ const Data = [
         preview: 'https://drix-to-do-app.vercel.app/'
     },
     { 
-        id: 11, 
+        id: 13, 
         type: 'web', 
         title: 'News Letter', 
         desc: 'A Frontend Mentor challenge: create a Newsletter Sign-up form with a success message using React and Tailwind.', 
@@ -115,7 +139,7 @@ const Data = [
         preview: 'https://drix-newsletter-sign-up-form-with-success-message.vercel.app/'
     },
     { 
-        id: 12, 
+        id: 14, 
         type: 'web', 
         title: 'Age Calculator', 
         desc: 'A Frontend Mentor challenge: create an Age calculator app using React and Tailwind.', 
@@ -125,7 +149,7 @@ const Data = [
         preview: 'https://drix-age-calculator-app.vercel.app/'
     },
     { 
-        id: 13, 
+        id: 15, 
         type: 'web', 
         title: 'Solar System', 
         desc: 'Solar System with animation using keyframes', 
@@ -135,7 +159,7 @@ const Data = [
         preview: 'https://christiandriz.github.io/Solar-System/'
     },
     { 
-        id: 14, 
+        id: 16, 
         type: 'web', 
         title: 'News Homepage', 
         desc: 'A Frontend Mentor challenge: create a responsive news homepage', 
@@ -144,6 +168,7 @@ const Data = [
         github: 'https://github.com/ChristianDriz/News-homepage',
         preview: 'https://christiandriz.github.io/News-homepage/'
     },
+
 ]
 export default Data;
 

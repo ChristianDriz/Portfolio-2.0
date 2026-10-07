@@ -1,8 +1,13 @@
 import { useState } from 'react'
 import Swal from 'sweetalert2'
 import Validate from './validate';
+import emailjs from '@emailjs/browser';
 
 function SendMail ()  {
+
+    emailjs.init({
+        publicKey: "b7iKisFs5nyQVKyKJ",
+    });
 
 	const { checkName, checkEmail, checkSubject, checkMessage, nameError, emailError, subjectError, messageError } = Validate();
 
@@ -43,58 +48,50 @@ function SendMail ()  {
         const subject = checkSubject(formData.subject);
         const message = checkMessage(formData.message);
 
-        if (name && email && subject && message){
-
-			const content = "Name: " + formData.name + "<br/>" +
-			"Email : " + formData.email +  "<br/>"  +
-			"Subject: " + formData.subject +  "<br/>"  +
-			"Message: " + formData.message;
-
-			window.Email.send({
-			Host : "smtp.elasticemail.com",
-			Username : "cjdimla1227@gmail.com",
-			Password : "92F5B68CB3D49DE9F6DBFC0C0B1875BFCC3B",
-			To : 'cjdimla1227@gmail.com',
-			From : 'cjdimla1227@gmail.com',
-			Subject : 'Message from portfolio contact form',
-			Body : content
-			}).then(
-				message => {
-					if (message === "OK") {
-						Swal.fire({
-							title: 'Success!',
-							text: "Message has been sent.",
-							icon: 'success',
-							showConfirmButton: false,
-							timer: 2000
-						}).then(() => {
-							setFormData({
-								name: '',
-								email: '',
-								subject: '',
-								message: '',
-							});
-						});
-					}
-					else{
-						Swal.fire({
-							title: 'Error!',
-							text: "Message not sent.",
-							icon: 'error',
-							showConfirmButton: false,
-							timer: 2000
-						}).then(() => {
-							setFormData({
-								name: '',
-								email: '',
-								subject: '',
-								message: '',
-							});
-						});
-					}
-				}
-			);
+        if (!name || !email || !subject || !message) {
+            return;
         }
+
+        emailjs.send(
+            'service_fictlgi',
+            'template_d3n0doj',
+            {
+                name: formData.name,
+                email: formData.email,
+                subject: formData.subject,
+                message: formData.message
+            },
+            {
+                publicKey: 'b7iKisFs5nyQVKyKJ'
+            }
+        )
+        .then(() => {
+            Swal.fire({
+                title: 'Success!',
+                text: 'Message has been sent.',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 2000
+            });
+
+            setFormData({
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
+            });
+        })
+        .catch((error) => {
+            console.error('EmailJS error:', error);
+
+            Swal.fire({
+                title: 'Error!',
+                text: 'Message not sent.',
+                icon: 'error',
+                showConfirmButton: false,
+                timer: 2000
+            });
+        });
 		
     }
 
